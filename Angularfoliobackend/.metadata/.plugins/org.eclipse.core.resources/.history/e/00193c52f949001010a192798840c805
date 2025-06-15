@@ -1,0 +1,10 @@
+package com.hakimdev.portfolio.controller;
+@RestController
+public class TestController {
+
+    @GetMapping("/hello")
+    public String hello() {
+        return "API is working!";
+    }
+}
+

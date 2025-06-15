@@ -1,0 +1,20 @@
+# Angular frontend
+Angularfoliofrontend/node_modules/
+Angularfoliofrontend/dist/
+Angularfoliofrontend/.angular/
+
+# Spring Boot backend
+Angularfoliobackend/target/
+Angularfoliobackend/*.log
+
+# System files
+.DS_Store
+
+# IDE files
+.idea/
+.vscode/
+*.iml
+
+# Logs
+*.log
+
