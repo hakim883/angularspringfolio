@@ -1,0 +1,20 @@
+package com.hakimdev.portfolio.controller;
+
+import com.hakimdev.portfolio.entity.ContactMessage;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+@RestController
+@RequestMapping("/api")
+public class ContactController {
+
+    @PostMapping("/contact")
+    public ResponseEntity<String> receiveContactMessage(@RequestBody ContactMessage message) {
+        // Ici tu peux traiter le message, l’enregistrer en base ou l’envoyer par mail
+
+        System.out.println("Message reçu de " + message.getName() + " (" + message.getEmail() + ")");
+        System.out.println("Message: " + message.getMessage());
+
+        return ResponseEntity.ok("Message reçu avec succès !");
+    }
+}
