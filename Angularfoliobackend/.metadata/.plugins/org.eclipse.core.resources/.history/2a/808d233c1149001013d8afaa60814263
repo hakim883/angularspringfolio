@@ -1,0 +1,5 @@
+package com.votrepackage.entity;
+
+public class Course {
+
+}

@@ -1,0 +1,17 @@
+// src/main/java/com/votrepackage/repository/ProjectRepository.java
+package com.votrepackage.repository;
+
+import com.votrepackage.entity.Project;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import java.util.List;
+
+public interface ProjectRepository extends JpaRepository<Project, Long> {
+    
+    // Recherche par titre (insensible à la casse)
+    List<Project> findByTitleContainingIgnoreCase(String keyword);
+    
+    // Requête custom pour tri par date
+    @Query("SELECT p FROM Project p ORDER BY p.createdAt DESC")
+    List<Project> findAllOrderByDateDesc();
+}

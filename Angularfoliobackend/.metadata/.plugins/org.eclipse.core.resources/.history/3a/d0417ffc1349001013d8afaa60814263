@@ -1,0 +1,5 @@
+package com.hakimdev.portfolio.entity;
+
+public class About {
+
+}

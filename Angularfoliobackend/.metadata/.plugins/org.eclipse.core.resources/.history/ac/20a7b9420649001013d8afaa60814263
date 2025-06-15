@@ -1,0 +1,17 @@
+package com.hakimdev.portfolio.entity;
+
+import jakarta.persistence.*;
+import jakarta.validation.constraints.Email;
+import lombok.Data;
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
+
+@Entity
+@Data
+public class Project {
+    // ... autres champs
+    
+    @OneToMany(mappedBy = "project")  // Doit correspondre au nom dans Video
+    private List<Video> videos = new ArrayList<>();
+}

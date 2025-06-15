@@ -1,0 +1,24 @@
+// src/main/java/com/votrepackage/controller/ProjectController.java
+package com.votrepackage.controller;
+
+import com.votrepackage.entity.Project;
+import com.votrepackage.repository.ProjectRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+import java.util.List;
+
+@RestController
+@RequestMapping("/api/projects") // Cette annotation est cruciale
+public class ProjectController {
+    
+    @Autowired
+    private ProjectRepository projectRepository;
+
+    @PostMapping // Doit être présent pour les requêtes POST
+    public ResponseEntity<Project> createProject(@RequestBody Project project) {
+        Project savedProject = projectRepository.save(project);
+        return new ResponseEntity<>(savedProject, HttpStatus.CREATED);
+    }
+}

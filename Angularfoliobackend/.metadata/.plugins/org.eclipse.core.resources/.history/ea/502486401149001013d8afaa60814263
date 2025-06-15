@@ -1,0 +1,26 @@
+// src/main/java/com/votrepackage/controller/CourseController.java
+package com.votrepackage.controller;
+
+import com.votrepackage.entity.Course;
+import com.votrepackage.repository.CourseRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+import java.util.List;
+
+@RestController
+@RequestMapping("/api/courses")
+public class CourseController {
+
+    @Autowired
+    private CourseRepository courseRepository;
+
+    @GetMapping
+    public List<Course> getAllCourses() {
+        return courseRepository.findAll();
+    }
+
+    @GetMapping("/platform/{platform}")
+    public List<Course> getByPlatform(@PathVariable String platform) {
+        return courseRepository.findByPlatform(platform);
+    }
+}

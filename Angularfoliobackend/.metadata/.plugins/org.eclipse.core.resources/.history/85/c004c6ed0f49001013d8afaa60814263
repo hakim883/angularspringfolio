@@ -1,0 +1,37 @@
+package com.hakimdev.portfolio.entity;
+
+import jakarta.persistence.*;
+import jakarta.validation.constraints.Email;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
+@Entity
+@Data // Génère getters/setters
+@NoArgsConstructor // Constructeur sans arguments
+@AllArgsConstructor // Constructeur avec tous les arguments
+public class Project {
+	
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+	    private Long id;
+
+	    private String title;
+	    private String description;
+	    private String imageUrl;
+	    private String demoUrl;
+
+    private Long id;  // Ce champ est obligatoire
+    
+    private String title;
+    private String description;
+    private String imageUrl;
+    private String demoUrl;
+    
+    @OneToMany(mappedBy = "project", cascade = CascadeType.ALL)
+    private List<Video> videos = new ArrayList<>();
+}
