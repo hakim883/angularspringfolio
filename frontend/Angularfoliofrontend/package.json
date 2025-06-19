@@ -3,8 +3,9 @@
   "version": "0.0.0",
 
   "scripts": {
-    "build": "ng build --configuration production"
-  },
+  "build": "ng build --prod"
+},
+
  
   "styles": [
     "node_modules/@fortawesome/fontawesome-free/css/all.min.css",
