@@ -1493,3 +1493,4 @@
 2025-06-18 15:07:01,741 [Worker-4: Launching portfolio-backend - PortfolioBackendApplication] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
 2025-06-18 15:07:01,777 [Worker-4: Launching portfolio-backend - PortfolioBackendApplication] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src/main/resources to target/classes
 2025-06-18 15:07:01,787 [Worker-4: Launching portfolio-backend - PortfolioBackendApplication] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/admin/Angularfolio/Angularfoliobackend/portfolio-backend/src/test/resources
+2025-06-19 17:05:06,180 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
