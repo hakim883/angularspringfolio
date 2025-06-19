@@ -7,8 +7,8 @@ Angularfoliofrontend/.angular/
 Angularfoliobackend/target/
 Angularfoliobackend/*.log
 
-# System files
-.DS_Store
+# # System files
+# .DS_Store
 
 # IDE files
 .idea/
@@ -18,3 +18,10 @@ Angularfoliobackend/*.log
 # Logs
 *.log
 
+# macOS
+.DS_Store
+
+# Eclipse
+*.log
+*.lock
+.metadata/
